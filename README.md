@@ -18,13 +18,6 @@ CSS
 
 Javascript
 
-The Mpesa API
 
-Challenges and Solutions
-Challenge: 
 
-Solution:
-
-Challenge: 
-Solution: 
 
