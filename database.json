@@ -1,0 +1,23 @@
+{
+    "laptops": [
+    {
+      "id": 1,
+      "title": "macbook",
+      "price": "15000ksh"
+     
+    },
+    {
+      "id": 2,
+      "name": "hp",
+      "price": "10000ksh"
+      
+    },
+    {
+      "id": 3,
+      "name": "acer",
+      "price": "username3"
+     
+    }
+  ]
+}
+   

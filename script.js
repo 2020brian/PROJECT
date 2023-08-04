@@ -2,48 +2,48 @@
     const mac= document.getElementById("macbook").addEventListener("click", buybutton);
     const hp= document.getElementById("hp").addEventListener("click", buybutton1);
     const acer= document.getElementById("acer").addEventListener("click", buybutton2);
-    let dataurl = ("http://localhost:3000/")
+    
+
+
    
 
 
   function buybutton(){
-    fetch(dataurl) 
-    .then(response => res.json)
-    .then()
+    fetch("http://localhost:3000?id=1")
+    .then(response => response.json())
+  .then(data => console.log(data));
+
+    }
 
     
-  }
+  
 
   function buybutton1(){
-    fetch(dataurl) 
-    .then(response => res.json)
-    .then()
+    fetch("http://localhost:3000?id=2") 
+    .then(response => response.json())
+  .then(data => console.log(data));
+    }
     
-  }
+  
 
 
   function buybutton2(){
-    fetch(dataurl) 
-    .then(response => res.json)
-    .then()
+    fetch("http://localhost:3000?id=3") 
+    .then(response => response.json())
+  .then(data => console.log(data));
    
   }      
-//safaricom api
-var unirest = require("unirest");
-var req = unirest("GET", "https://sandbox.safaricom.co.ke/oauth/v1/generate");
- 
-req.query({
- "grant_type": "client_credentials"
-});
- 
-req.headers({
- "Authorization": "Basic SWZPREdqdkdYM0FjWkFTcTdSa1RWZ2FTSklNY001RGQ6WUp4ZVcxMTZaV0dGNFIzaA=="
-});
- 
-req.end(res => {
- if (res.error) throw new Error(res.error);
- console.log(res.body);
-});
 
- 
+
+  fetch(myRequest)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    return response.blob();
+  })
+  .then((response) => {
+    myImage.src = URL.createObjectURL(response);
+  });
 
